@@ -1,4 +1,4 @@
-package algo.medium;
+package com.shehab;
 
 import static org.junit.Assert.assertTrue;
 
