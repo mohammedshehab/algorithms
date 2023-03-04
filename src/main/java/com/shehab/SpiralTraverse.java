@@ -14,13 +14,14 @@ public class SpiralTraverse {
 		LeftToRight, TopToBottom, RightToLeft, BottomToTop
 	}
 
+	// Time and Space Complexity
+	// O(n) time | O(n) space - where n is the total number of elements in the array
 	public static List<Integer> spiralTraverse(int[][] array) {
 		// Write your code here.
 
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		Direction direction = Direction.LeftToRight;
 
-		// ------------------------------ New ------------------------------ //
 		int top = 0;
 		int bottom = array.length - 1; // Rows Length
 		int left = 0;
@@ -33,7 +34,7 @@ public class SpiralTraverse {
 		// Top & Bottom
 		int rowsBegin = 0;
 		int rowsLength = array.length - 1;
-		
+
 		while( top <= bottom && left <= right) {
 			// 1) Left to Right
 			// One row is decreased
@@ -56,7 +57,6 @@ public class SpiralTraverse {
 				if(rowsBegin <= rowsLength) {
 					colsLength--;
 					right--;
-
 					direction = Direction.RightToLeft;
 				}
 				else
@@ -100,12 +100,11 @@ public class SpiralTraverse {
 		};
 		List<Integer> expected = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
 		List<Integer> actual = spiralTraverse(input);
-		//assertTrue(expected.equals(actual));
-		assertTrue(true);
+		assertTrue(expected.equals(actual));
 	}
 
 	@Test
-	public   void TestCase2() {
+	public  void TestCase2() {
 		System.out.println("\n=======================================");
 		int[][] input =
 				new int[][] {
@@ -115,11 +114,7 @@ public class SpiralTraverse {
 		};
 		List<Integer> expected = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
 		List<Integer> actual = spiralTraverse(input);
-		//assertTrue(expected.equals(actual));
-		assertTrue(true);
+		assertTrue(expected.equals(actual));
 	}
 
-	public static void main(String[] args) {
-		//TestCase2();
-	}
 }
