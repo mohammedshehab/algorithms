@@ -20,6 +20,20 @@ import org.junit.Test;
   to the right, and proceeds in a spiral pattern all the way until every element
   has been visited.
   
+  Sample Input
+  
+  array    = [
+			  [1,   2,  3, 4],
+			  [12, 13, 14, 5],
+			  [11, 16, 15, 6],
+			  [10,  9,  8, 7],
+	         ]
+
+Sample output 
+
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16] 
+
+  
  * @author Mohamed Shehab
  *
  */
